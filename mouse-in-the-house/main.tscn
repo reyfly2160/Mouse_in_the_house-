@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://cmp0iv0mb2cnc"]
+
+[ext_resource type="Script" uid="uid://cdh50kkc4kr4w" path="res://character_body_3d.gd" id="1_ig7tw"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_ig7tw"]
+sky_material = SubResource("ProceduralSkyMaterial_7dm0k")
+
+[sub_resource type="Environment" id="Environment_0xm2m"]
+background_mode = 2
+sky = SubResource("Sky_ig7tw")
+glow_enabled = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ucufk"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ucufk"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0a554"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0a554"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lw7xb"]
+size = Vector3(0.5, 0.8, 2.507)
+
+[node name="Mian" type="Node3D" unique_id=1205235614]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=308205743]
+environment = SubResource("Environment_0xm2m")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=93117369]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 8, 0)
+shadow_enabled = true
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1944282909]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.330806, 0.4, 0.24658203)
+size = Vector3(0.5, 0.8, 2.506836)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=899660693]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.278, 1, 2.994)
+size = Vector3(0.6, 2, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=850751257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.283151, 0.9545715, 2.2261102)
+size = Vector3(0.3, 0.3, 0.45)
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=1873762145]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -6, 0, 2)
+script = ExtResource("1_ig7tw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=336588130]
+transform = Transform3D(0.09999999, 0, 0, 0, -4.371138e-09, 0.09999999, 0, -0.09999999, -4.371138e-09, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_ucufk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=140571343]
+transform = Transform3D(-4.371139e-09, -0.1, 0, 0.1, -4.371139e-09, 0, 0, 0, 0.1, 5.9604638e-08, 5.9604645e-08, -2.1175824e-22)
+shape = SubResource("CapsuleShape3D_ucufk")
+
+[node name="Head" type="Node3D" parent="Player" unique_id=1811616125]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player/Head" unique_id=786148870]
+transform = Transform3D(0.1, 2.1855695e-09, 5.856222e-10, -2.1855697e-09, 0.08660254, 0.05, 5.8562133e-10, -0.05, 0.08660254, 0, 0.099999994, 0.099999905)
+
+[node name="Node3D" type="Node3D" parent="." unique_id=2108439585]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D" unique_id=723167878]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("PlaneMesh_0a554")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D" unique_id=1801584532]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D" unique_id=296058068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_0a554")
+
+[node name="Node3D2" type="Node3D" parent="." unique_id=961378323]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Node3D2" unique_id=1725421398]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.330806, 0.4, 1.246582)
+size = Vector3(0.5, 0.8, 2.506836)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D2" unique_id=821176688]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D2/StaticBody3D" unique_id=1345781539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.33, 0.4, 1.247)
+shape = SubResource("BoxShape3D_lw7xb")
