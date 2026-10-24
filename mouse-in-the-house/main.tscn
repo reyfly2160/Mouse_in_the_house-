@@ -9,20 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://cqvbe1mw772jt" path="res://Assets/Kitchen Cabinet by Kenney - tWyOLYYHPw.glb" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://cqv77nix45sjh" path="res://Assets/Kitchen Cabinet Corner by Kenney - JyALkkxfvw.glb" id="6_272bh"]
 [ext_resource type="PackedScene" uid="uid://d2rolimvbfg36" path="res://Assets/Kitchen Sink by Kenney - nNGtcp9qK2.glb" id="7_272bh"]
-[ext_resource type="ArrayMesh" uid="uid://c2nxuwakonyey" path="res://kenny/Models/OBJ format/hoodLarge.obj" id="9_4c57u"]
+[ext_resource type="ArrayMesh" uid="uid://yoy2no6oo5ak" path="res://kenny/Models/OBJ format/hoodModern.obj" id="9_dg77c"]
 [ext_resource type="ArrayMesh" uid="uid://cuwmw1k6pqgyj" path="res://kenny/Models/OBJ format/wall.obj" id="10_efxa6"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-
-[sub_resource type="Sky" id="Sky_ig7tw"]
-sky_material = SubResource("ProceduralSkyMaterial_7dm0k")
-
-[sub_resource type="Environment" id="Environment_0xm2m"]
-background_mode = 2
-sky = SubResource("Sky_ig7tw")
-glow_enabled = true
+[ext_resource type="PackedScene" uid="uid://cposn0cgkninb" path="res://kenny/Models/DAE format/lampSquareCeiling.dae" id="12_dg77c"]
+[ext_resource type="PackedScene" uid="uid://d1wlik0qimxkb" path="res://Assets/Toaster by John Mason-Smith - 6Aoke0DThxh.glb" id="13_ycdy4"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ucufk"]
 
@@ -37,10 +27,10 @@ size = Vector3(1, 2, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_5qche"]
 size = Vector3(0.9169922, 1, 3.4696655)
 
-[node name="Mian" type="Node3D" unique_id=1205235614]
+[sub_resource type="BoxShape3D" id="BoxShape3D_blegu"]
+size = Vector3(0.31051254, 1, 0.5749512)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=308205743]
-environment = SubResource("Environment_0xm2m")
+[node name="Mian" type="Node3D" unique_id=1205235614]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=93117369]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 8, 0)
@@ -50,10 +40,6 @@ shadow_enabled = true
 [node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1944282909]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.330806, 0.4, -1.9843097)
 size = Vector3(0.5, 0.8, 2.506836)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=850751257]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.283151, 0.9545715, 2.2261102)
-size = Vector3(0.3, 0.3, 0.45)
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=1873762145]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -6, 0, 2)
@@ -73,15 +59,15 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 [node name="Camera3D" type="Camera3D" parent="Player/Head" unique_id=786148870]
 transform = Transform3D(0.10000001, 2.1855695e-09, 5.8562266e-10, -2.18557e-09, 0.08660254, 0.05, 5.8562044e-10, -0.05, 0.08660255, 0, 0.005, 0)
 
-[node name="Node3D" type="Node3D" parent="." unique_id=2108439585]
+[node name="Floor" type="Node3D" parent="." unique_id=2108439585]
 
-[node name="FloorFull2" type="MeshInstance3D" parent="Node3D" unique_id=413677878]
+[node name="FloorFull2" type="MeshInstance3D" parent="Floor" unique_id=413677878]
 transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 10, 0, -10)
 mesh = ExtResource("2_5vw27")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Node3D" unique_id=1801584532]
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor" unique_id=1801584532]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D" unique_id=296058068]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D" unique_id=296058068]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("BoxShape3D_0a554")
 
@@ -130,11 +116,11 @@ transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, 1.
 [node name="Kitchen Cabinet by Kenney - tWyOLYYHPw" parent="KitchenCounter2" unique_id=2053450402 instance=ExtResource("5_7mycd")]
 transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, 2.1758137, -0.4, -0.83748776)
 
-[node name="HoodLarge" type="MeshInstance3D" parent="." unique_id=1600159791]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.199627, 0, 1.1941288)
-mesh = ExtResource("9_4c57u")
-
 [node name="Walls" type="Node3D" parent="." unique_id=196549079]
+
+[node name="HoodLarge" type="MeshInstance3D" parent="Walls" unique_id=1600159791]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -9.477249, 1.6439452, 1.6550314)
+mesh = ExtResource("9_dg77c")
 
 [node name="Wall" type="MeshInstance3D" parent="Walls" unique_id=1170230693]
 transform = Transform3D(-2.1855695e-07, 0, -1, 0, 2, 0, 5, 0, -4.371139e-08, -10.049, 0, 4)
@@ -146,14 +132,49 @@ mesh = ExtResource("10_efxa6")
 
 [node name="WallWindow" type="MeshInstance3D" parent="Walls" unique_id=189627662]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.06287, 1.046575, -1.003147)
+visible = false
 mesh = ExtResource("3_efxa6")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Walls/WallWindow" unique_id=1627509750]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.52004623, 0.7383349, -0.03198284)
+visible = false
 light_color = Color(0.94509804, 0.92156863, 0.78431374, 1)
 light_energy = 0.3
 light_size = 0.001
 light_specular = 8.079
-shadow_enabled = true
 shadow_bias = 0.5
 shadow_opacity = 0.74
+
+[node name="Wall3" type="MeshInstance3D" parent="Walls" unique_id=2126791704]
+transform = Transform3D(-2.1855695e-07, 4, 4.371139e-08, 0, -1.7484555e-07, 1, 5, 1.7484555e-07, 1.9106855e-15, -10.049, 2.535419, 4)
+mesh = ExtResource("10_efxa6")
+
+[node name="lampSquareCeiling" parent="Walls" unique_id=286907257 instance=ExtResource("12_dg77c")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -8.728567, 2.089842, 1.3555241)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Walls/lampSquareCeiling" unique_id=61878691]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05979824, 0, 0.049551785)
+light_color = Color(1, 0.92941177, 0.87058824, 1)
+
+[node name="lampSquareCeiling2" parent="Walls" unique_id=1216052092 instance=ExtResource("12_dg77c")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.0889173, 2.089842, 1.3555241)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Walls/lampSquareCeiling2" unique_id=88133309]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05979824, 0, 0.049551785)
+light_color = Color(1, 0.92941177, 0.87058824, 1)
+
+[node name="Wall4" type="MeshInstance3D" parent="Walls" unique_id=1200988229]
+transform = Transform3D(5, 0, 0, 0, 2, 0, 0, 0, 1, -5.096302, 0, 4)
+mesh = ExtResource("10_efxa6")
+
+[node name="Toaster" type="Node3D" parent="." unique_id=15396407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.760306, 0.94458544, 1.9964583)
+
+[node name="Toaster by John Mason-Smith - 6Aoke0DThxh" parent="Toaster" unique_id=1232227454 instance=ExtResource("13_ycdy4")]
+transform = Transform3D(0.60181504, 0, 0.79863554, 0, 1, 0, -0.79863554, 0, 0.60181504, 0.378, 0.125, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Toaster" unique_id=211470657]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Toaster/StaticBody3D" unique_id=1974955077]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37417412, 0, 0.029663086)
+shape = SubResource("BoxShape3D_blegu")
