@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c75j1gxsps3ac"
+path="res://.godot/imported/cabinetTelevisionDoors.obj-d48902f0ba25591656ec73e8a5d08f84.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cabinetTelevisionDoors.obj-d48902f0ba25591656ec73e8a5d08f84.mesh"]
+
+source_file="res://kenny/Models/OBJ format/cabinetTelevisionDoors.obj"
+dest_files=["res://.godot/imported/cabinetTelevisionDoors.obj-d48902f0ba25591656ec73e8a5d08f84.mesh", "res://.godot/imported/cabinetTelevisionDoors.obj-d48902f0ba25591656ec73e8a5d08f84.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
