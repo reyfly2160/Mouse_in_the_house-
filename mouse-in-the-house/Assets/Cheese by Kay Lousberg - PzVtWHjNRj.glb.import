@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dbkm55nuwu3r8"
-path="res://.godot/imported/Floor.glb-6a78a70fd1587aa56b116e0c01063c1d.scn"
+uid="uid://bi7bf5ygbrnr"
+path="res://.godot/imported/Cheese by Kay Lousberg - PzVtWHjNRj.glb-f2d7903e428e381969ab2966d32e46a9.scn"
 
 [deps]
 
-source_file="res://Floor.glb"
-dest_files=["res://.godot/imported/Floor.glb-6a78a70fd1587aa56b116e0c01063c1d.scn"]
+source_file="res://Assets/Cheese by Kay Lousberg - PzVtWHjNRj.glb"
+dest_files=["res://.godot/imported/Cheese by Kay Lousberg - PzVtWHjNRj.glb-f2d7903e428e381969ab2966d32e46a9.scn"]
 
 [params]
 

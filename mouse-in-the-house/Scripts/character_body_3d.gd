@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 
 const SPEED = 1
-const JUMP_VELOCITY = 3
+const JUMP_VELOCITY = 3.2
 @export var look_sensitivity: float = 0.001
 
 @onready var mouse = $"."
@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
-
+	
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		mouse.rotate_y(-event.relative.x * look_sensitivity)

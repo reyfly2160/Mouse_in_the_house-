@@ -4,19 +4,39 @@
 [ext_resource type="ArrayMesh" uid="uid://dp5hjs0gwn4ak" path="res://kenny/Models/OBJ format/floorFull.obj" id="2_5vw27"]
 [ext_resource type="PackedScene" uid="uid://buwt7phhycs1c" path="res://Assets/Fridge by Blocks Demo - dTes5OLMprT.glb" id="2_lquwl"]
 [ext_resource type="PackedScene" uid="uid://buqid10w1am04" path="res://Assets/Kitchen Stove by Kenney - kTJU2y4R15.glb" id="3_7mycd"]
-[ext_resource type="ArrayMesh" uid="uid://bk3yj1wllg2ia" path="res://kenny/Models/OBJ format/wallWindow.obj" id="3_efxa6"]
 [ext_resource type="PackedScene" uid="uid://d23seh3ps6yhd" path="res://Assets/Kitchen Cabinet Drawer by Kenney - rGZG7vK3fd.glb" id="4_272bh"]
 [ext_resource type="PackedScene" uid="uid://cqvbe1mw772jt" path="res://Assets/Kitchen Cabinet by Kenney - tWyOLYYHPw.glb" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://cqv77nix45sjh" path="res://Assets/Kitchen Cabinet Corner by Kenney - JyALkkxfvw.glb" id="6_272bh"]
-[ext_resource type="PackedScene" uid="uid://d2rolimvbfg36" path="res://Assets/Kitchen Sink by Kenney - nNGtcp9qK2.glb" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://b7io831a8hura" path="res://Assets/Kitchen Sink by Kenney - nNGtcp9qK2.glb" id="7_272bh"]
 [ext_resource type="ArrayMesh" uid="uid://yoy2no6oo5ak" path="res://kenny/Models/OBJ format/hoodModern.obj" id="9_dg77c"]
 [ext_resource type="ArrayMesh" uid="uid://cuwmw1k6pqgyj" path="res://kenny/Models/OBJ format/wall.obj" id="10_efxa6"]
 [ext_resource type="PackedScene" uid="uid://cposn0cgkninb" path="res://kenny/Models/DAE format/lampSquareCeiling.dae" id="12_dg77c"]
 [ext_resource type="PackedScene" uid="uid://d1wlik0qimxkb" path="res://Assets/Toaster by John Mason-Smith - 6Aoke0DThxh.glb" id="13_ycdy4"]
+[ext_resource type="Script" uid="uid://dqpvbcy2s7mxl" path="res://Scripts/cheese.gd" id="14_vivmo"]
+[ext_resource type="PackedScene" uid="uid://dubvkwuabrf1u" path="res://Assets/Box by Kenney - HvjissDrdr.glb" id="14_w48qg"]
+[ext_resource type="Script" uid="uid://367nrrf58elk" path="res://Score.gd" id="15_vivmo"]
+[ext_resource type="Texture2D" uid="uid://74d0yiextqhn" path="res://cartoon-cheese-1.png" id="16_2cqfq"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_ucufk"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_5qche"]
+size = Vector3(0.9169922, 1, 3.4696655)
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ucufk"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_32dos"]
+size = Vector3(3.5358887, 0.96777344, 0.87316895)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lelfc"]
+size = Vector3(0.13952637, 5.089237, 5.226013)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_blegu"]
+size = Vector3(0.31051254, 0.99053955, 0.6713867)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lw7xb"]
+size = Vector3(0.2535553, 0.74890137, 0.24560547)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d6haa"]
+size = Vector3(0.5715332, 0.18269348, 0.85614014)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s38yd"]
+size = Vector3(0.22839355, 0.63916016, 0.37739563)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0a554"]
 size = Vector3(20, 1, 20)
@@ -24,25 +44,192 @@ size = Vector3(20, 1, 20)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ucufk"]
 size = Vector3(1, 2, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_5qche"]
-size = Vector3(0.9169922, 1, 3.4696655)
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ucufk"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_blegu"]
-size = Vector3(0.31051254, 1, 0.5749512)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ucufk"]
 
-[node name="Mian" type="Node3D" unique_id=1205235614]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0a554"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_blegu"]
+
+[node name="Main" type="Node3D" unique_id=1205235614]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=93117369]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 8, 0)
+transform = Transform3D(0.9102083, -1.8103105e-08, 0.41415074, -0.41415074, -3.9786467e-08, 0.9102083, 0, -1, -4.371139e-08, 0, 8, 0)
 visible = false
 shadow_enabled = true
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1944282909]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.330806, 0.4, -1.9843097)
-size = Vector3(0.5, 0.8, 2.506836)
+[node name="Enviroment" type="Node3D" parent="." unique_id=935148576]
+
+[node name="KitchenCounter1" type="Node3D" parent="Enviroment" unique_id=121446458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.1, 0.4, 1.6228523)
+
+[node name="Kitchen Stove by Kenney - kTJU2y4R15" parent="Enviroment/KitchenCounter1" unique_id=1514373021 instance=ExtResource("3_7mycd")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 0, -0.4, 0.031100035)
+
+[node name="Kitchen Cabinet Drawer by Kenney - rGZG7vK3fd" parent="Enviroment/KitchenCounter1" unique_id=1879564027 instance=ExtResource("4_272bh")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 0, -0.4, 0.8891144)
+
+[node name="Kitchen Cabinet by Kenney - tWyOLYYHPw" parent="Enviroment/KitchenCounter1" unique_id=291460920 instance=ExtResource("5_7mycd")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 0, -0.4, -0.8256234)
+
+[node name="Kitchen Cabinet Corner by Kenney - JyALkkxfvw" parent="Enviroment/KitchenCounter1" unique_id=1581219038 instance=ExtResource("6_272bh")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 0.017804146, -0.4, -1.6780272)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enviroment/KitchenCounter1" unique_id=1900527633]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviroment/KitchenCounter1/StaticBody3D" unique_id=1656259776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44150448, 0, -0.85702515)
+shape = SubResource("BoxShape3D_5qche")
+
+[node name="KitchenCounter2" type="Node3D" parent="Enviroment" unique_id=1283885913]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.541505, 0.4, 0.7658272)
+
+[node name="Kitchen Sink by Kenney - nNGtcp9qK2" parent="Enviroment/KitchenCounter2" unique_id=2004661963 instance=ExtResource("7_272bh")]
+transform = Transform3D(-2, 0, 1.7484555e-07, 0, 2, 0, -1.7484555e-07, 0, -2, 0.45701504, -0.4, -0.839229)
+
+[node name="Kitchen Cabinet Drawer by Kenney - rGZG7vK3fd" parent="Enviroment/KitchenCounter2" unique_id=1171050912 instance=ExtResource("4_272bh")]
+transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, 1.3161144, -0.4, -0.8384977)
+
+[node name="Kitchen Cabinet by Kenney - tWyOLYYHPw" parent="Enviroment/KitchenCounter2" unique_id=2053450402 instance=ExtResource("5_7mycd")]
+transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, 2.1758137, -0.4, -0.83748776)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enviroment/KitchenCounter2" unique_id=190085493]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.2511976)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviroment/KitchenCounter2/StaticBody3D" unique_id=1285165137]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2679443, 0.016113281, -0.06341553)
+shape = SubResource("BoxShape3D_32dos")
+
+[node name="Walls" type="Node3D" parent="Enviroment" unique_id=196549079]
+
+[node name="Wall" type="MeshInstance3D" parent="Enviroment/Walls" unique_id=1170230693]
+transform = Transform3D(-2.1855695e-07, 0, -1, 0, 2, 0, 5, 0, -4.371139e-08, -10.049, 0, 4)
+mesh = ExtResource("10_efxa6")
+
+[node name="Wall2" type="MeshInstance3D" parent="Enviroment/Walls" unique_id=950326424]
+transform = Transform3D(-5, 0, -8.742278e-08, 0, 2, 0, 4.371139e-07, 0, -1, -10.049924, -0.0041894913, -1.001086)
+mesh = ExtResource("10_efxa6")
+
+[node name="Wall3" type="MeshInstance3D" parent="Enviroment/Walls" unique_id=2126791704]
+transform = Transform3D(-2.1855695e-07, 4, 4.371139e-08, 0, -1.7484555e-07, 1, 5, 1.7484555e-07, 1.9106855e-15, -10.049, 2.535419, 4)
+mesh = ExtResource("10_efxa6")
+
+[node name="Wall4" type="MeshInstance3D" parent="Enviroment/Walls" unique_id=1200988229]
+transform = Transform3D(5, 0, 0, 0, 2, 0, 0, 0, 1, -5.096302, 0, 4)
+layers = 2
+mesh = ExtResource("10_efxa6")
+
+[node name="lampSquareCeiling" parent="Enviroment/Walls" unique_id=286907257 instance=ExtResource("12_dg77c")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -8.728567, 2.089842, 1.3555241)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Enviroment/Walls/lampSquareCeiling" unique_id=61878691]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.06, -0.112, 0.05)
+light_color = Color(1, 0.92941177, 0.87058824, 1)
+light_cull_mask = 4294967291
+shadow_enabled = true
+shadow_opacity = 0.5
+shadow_blur = 2.0
+shadow_caster_mask = 4294967291
+
+[node name="lampSquareCeiling2" parent="Enviroment/Walls" unique_id=1216052092 instance=ExtResource("12_dg77c")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.0889173, 2.089842, 1.3555241)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Enviroment/Walls/lampSquareCeiling2" unique_id=88133309]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.05979824, -0.11205959, 0.049551785)
+light_color = Color(1, 0.89411765, 0.80784315, 1)
+light_cull_mask = 4294967291
+shadow_enabled = true
+shadow_opacity = 0.5
+shadow_blur = 2.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enviroment/Walls" unique_id=69016529]
+collision_layer = 2
+collision_mask = 2
+
+[node name="Wall5" type="CollisionShape3D" parent="Enviroment/Walls/StaticBody3D" unique_id=810737552]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.6060677, 1.3090057, 4.0227494)
+shape = SubResource("BoxShape3D_lelfc")
+
+[node name="Wall6" type="CollisionShape3D" parent="Enviroment/Walls/StaticBody3D" unique_id=1433223447]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.6060677, 1.3090057, -1.0092909)
+shape = SubResource("BoxShape3D_lelfc")
+
+[node name="Wall7" type="CollisionShape3D" parent="Enviroment/Walls/StaticBody3D" unique_id=352239872]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -10.069538, 1.3090057, 1.4702313)
+shape = SubResource("BoxShape3D_lelfc")
+
+[node name="Wall9" type="CollisionShape3D" parent="Enviroment/Walls/StaticBody3D" unique_id=377540884]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, -1, 1, -4.371139e-08, 0, -4.371139e-08, -1, -4.371139e-08, -7.504719, 2.5241244, 1.5117927)
+shape = SubResource("BoxShape3D_lelfc")
+
+[node name="Toaster" type="Node3D" parent="Enviroment" unique_id=15396407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.013587, 0.94458544, 1.9964583)
+
+[node name="Toaster by John Mason-Smith - 6Aoke0DThxh" parent="Enviroment/Toaster" unique_id=1232227454 instance=ExtResource("13_ycdy4")]
+transform = Transform3D(0.60181504, 0, 0.79863554, 0, 1, 0, -0.79863554, 0, 0.60181504, 0.378, 0.125, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enviroment/Toaster" unique_id=211470657]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviroment/Toaster/StaticBody3D" unique_id=1974955077]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37417412, -0.0047302246, 0.07788086)
+shape = SubResource("BoxShape3D_blegu")
+
+[node name="Node3D" type="Node3D" parent="Enviroment" unique_id=1900054064]
+transform = Transform3D(1.7042677, 0, 1.0466479, 0, 2, 0, -1.0466479, 0, 1.7042677, -8.790219, 1.1920929e-07, 0.2209928)
+
+[node name="Box by Kenney - HvjissDrdr" parent="Enviroment/Node3D" unique_id=822052358 instance=ExtResource("14_w48qg")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enviroment/Node3D" unique_id=1248302973]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviroment/Node3D/StaticBody3D" unique_id=1949447849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0026779175, -0.12554932, 0.0041503906)
+shape = SubResource("BoxShape3D_lw7xb")
+
+[node name="Hood" type="Node3D" parent="Enviroment" unique_id=1439316503]
+
+[node name="HoodLarge" type="MeshInstance3D" parent="Enviroment/Hood" unique_id=1600159791]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -9.477249, 1.6439452, 1.6550314)
+mesh = ExtResource("9_dg77c")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enviroment/Hood" unique_id=1345737928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.47, 1.644, 1.4128612)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviroment/Hood/StaticBody3D" unique_id=397692468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.288208, 0.0333786, -0.18179321)
+shape = SubResource("BoxShape3D_d6haa")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Enviroment/Hood/StaticBody3D" unique_id=1548587182]
+transform = Transform3D(0.99295455, -0.118495904, 0, 0.118495904, 0.99295455, 0, 0, 0, 1, -0.47530556, 0.42854047, -0.18595791)
+shape = SubResource("BoxShape3D_s38yd")
+
+[node name="Floor" type="Node3D" parent="Enviroment" unique_id=2108439585]
+
+[node name="FloorFull2" type="MeshInstance3D" parent="Enviroment/Floor" unique_id=413677878]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 10, 0, -10)
+mesh = ExtResource("2_5vw27")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enviroment/Floor" unique_id=1801584532]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviroment/Floor/StaticBody3D" unique_id=296058068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_0a554")
+
+[node name="Fridge" type="Node3D" parent="Enviroment" unique_id=1130675164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.55, 0.4, 2.974)
+
+[node name="Fridge by Blocks Demo - dTes5OLMprT" parent="Enviroment/Fridge" unique_id=1037737949 instance=ExtResource("2_lquwl")]
+transform = Transform3D(-8.742278e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.742278e-09, 0, -0.402, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enviroment/Fridge" unique_id=688641330]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviroment/Fridge/StaticBody3D" unique_id=179859932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5866699, 0.016601563)
+shape = SubResource("BoxShape3D_ucufk")
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=1873762145]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -6, 0, 2)
+collision_mask = 3
 script = ExtResource("1_1bvp3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=336588130]
@@ -59,122 +246,50 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 [node name="Camera3D" type="Camera3D" parent="Player/Head" unique_id=786148870]
 transform = Transform3D(0.10000001, 2.1855695e-09, 5.8562266e-10, -2.18557e-09, 0.08660254, 0.05, 5.8562044e-10, -0.05, 0.08660255, 0, 0.005, 0)
 
-[node name="Floor" type="Node3D" parent="." unique_id=2108439585]
+[node name="Cheese" type="Node3D" parent="." unique_id=931380744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.307395, 0, 1.5354826)
+script = ExtResource("14_vivmo")
 
-[node name="FloorFull2" type="MeshInstance3D" parent="Floor" unique_id=413677878]
-transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 10, 0, -10)
-mesh = ExtResource("2_5vw27")
+[node name="UI" type="Control" parent="." unique_id=1557778881]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("15_vivmo")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Floor" unique_id=1801584532]
+[node name="CartoonCheese1" type="Sprite2D" parent="UI" unique_id=314992504]
+position = Vector2(40, 40)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("16_2cqfq")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D" unique_id=296058068]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-shape = SubResource("BoxShape3D_0a554")
+[node name="Label" type="Label" parent="UI" unique_id=1658141429]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 10.0
+offset_right = 175.0
+offset_bottom = 60.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0a554")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_blegu")
+text = "score"
 
-[node name="Fridge" type="Node3D" parent="." unique_id=1130675164]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.55, 0.4, 2.974)
+[node name="Label2" type="Label" parent="UI" unique_id=2007032583]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -43.5
+offset_right = 43.5
+offset_bottom = 23.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_font_sizes/font_size = 34
+text = "TIME"
+horizontal_alignment = 1
 
-[node name="Fridge by Blocks Demo - dTes5OLMprT" parent="Fridge" unique_id=1037737949 instance=ExtResource("2_lquwl")]
-transform = Transform3D(-8.742278e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.742278e-09, 0, -0.402, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Fridge" unique_id=688641330]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Fridge/StaticBody3D" unique_id=179859932]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5866699, 0.016601563)
-shape = SubResource("BoxShape3D_ucufk")
-
-[node name="KitchenCounter1" type="Node3D" parent="." unique_id=121446458]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.1, 0.4, 1.6228523)
-
-[node name="Kitchen Stove by Kenney - kTJU2y4R15" parent="KitchenCounter1" unique_id=1514373021 instance=ExtResource("3_7mycd")]
-transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 0, -0.4, 0.031100035)
-
-[node name="Kitchen Cabinet Drawer by Kenney - rGZG7vK3fd" parent="KitchenCounter1" unique_id=1879564027 instance=ExtResource("4_272bh")]
-transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 0, -0.4, 0.8891144)
-
-[node name="Kitchen Cabinet by Kenney - tWyOLYYHPw" parent="KitchenCounter1" unique_id=291460920 instance=ExtResource("5_7mycd")]
-transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 0, -0.4, -0.8256234)
-
-[node name="Kitchen Cabinet Corner by Kenney - JyALkkxfvw" parent="KitchenCounter1" unique_id=1581219038 instance=ExtResource("6_272bh")]
-transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 0.017804146, -0.4, -1.6780272)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="KitchenCounter1" unique_id=1900527633]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenCounter1/StaticBody3D" unique_id=1656259776]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44150448, 0, -0.85702515)
-shape = SubResource("BoxShape3D_5qche")
-
-[node name="KitchenCounter2" type="Node3D" parent="." unique_id=1283885913]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.541505, 0.4, 0.7658272)
-
-[node name="Kitchen Sink by Kenney - nNGtcp9qK2" parent="KitchenCounter2" unique_id=2004661963 instance=ExtResource("7_272bh")]
-transform = Transform3D(-2, 0, 1.7484555e-07, 0, 2, 0, -1.7484555e-07, 0, -2, 0.45701504, -0.4, -0.839229)
-
-[node name="Kitchen Cabinet Drawer by Kenney - rGZG7vK3fd" parent="KitchenCounter2" unique_id=1171050912 instance=ExtResource("4_272bh")]
-transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, 1.3161144, -0.4, -0.8384977)
-
-[node name="Kitchen Cabinet by Kenney - tWyOLYYHPw" parent="KitchenCounter2" unique_id=2053450402 instance=ExtResource("5_7mycd")]
-transform = Transform3D(-2, 0, -1.7484555e-07, 0, 2, 0, 1.7484555e-07, 0, -2, 2.1758137, -0.4, -0.83748776)
-
-[node name="Walls" type="Node3D" parent="." unique_id=196549079]
-
-[node name="HoodLarge" type="MeshInstance3D" parent="Walls" unique_id=1600159791]
-transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -9.477249, 1.6439452, 1.6550314)
-mesh = ExtResource("9_dg77c")
-
-[node name="Wall" type="MeshInstance3D" parent="Walls" unique_id=1170230693]
-transform = Transform3D(-2.1855695e-07, 0, -1, 0, 2, 0, 5, 0, -4.371139e-08, -10.049, 0, 4)
-mesh = ExtResource("10_efxa6")
-
-[node name="Wall2" type="MeshInstance3D" parent="Walls" unique_id=950326424]
-transform = Transform3D(-5, 0, -8.742278e-08, 0, 2, 0, 4.371139e-07, 0, -1, -10.049924, -0.0041894913, -1.001086)
-mesh = ExtResource("10_efxa6")
-
-[node name="WallWindow" type="MeshInstance3D" parent="Walls" unique_id=189627662]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.06287, 1.046575, -1.003147)
-visible = false
-mesh = ExtResource("3_efxa6")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Walls/WallWindow" unique_id=1627509750]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.52004623, 0.7383349, -0.03198284)
-visible = false
-light_color = Color(0.94509804, 0.92156863, 0.78431374, 1)
-light_energy = 0.3
-light_size = 0.001
-light_specular = 8.079
-shadow_bias = 0.5
-shadow_opacity = 0.74
-
-[node name="Wall3" type="MeshInstance3D" parent="Walls" unique_id=2126791704]
-transform = Transform3D(-2.1855695e-07, 4, 4.371139e-08, 0, -1.7484555e-07, 1, 5, 1.7484555e-07, 1.9106855e-15, -10.049, 2.535419, 4)
-mesh = ExtResource("10_efxa6")
-
-[node name="lampSquareCeiling" parent="Walls" unique_id=286907257 instance=ExtResource("12_dg77c")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -8.728567, 2.089842, 1.3555241)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Walls/lampSquareCeiling" unique_id=61878691]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05979824, 0, 0.049551785)
-light_color = Color(1, 0.92941177, 0.87058824, 1)
-
-[node name="lampSquareCeiling2" parent="Walls" unique_id=1216052092 instance=ExtResource("12_dg77c")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.0889173, 2.089842, 1.3555241)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Walls/lampSquareCeiling2" unique_id=88133309]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05979824, 0, 0.049551785)
-light_color = Color(1, 0.92941177, 0.87058824, 1)
-
-[node name="Wall4" type="MeshInstance3D" parent="Walls" unique_id=1200988229]
-transform = Transform3D(5, 0, 0, 0, 2, 0, 0, 0, 1, -5.096302, 0, 4)
-mesh = ExtResource("10_efxa6")
-
-[node name="Toaster" type="Node3D" parent="." unique_id=15396407]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.760306, 0.94458544, 1.9964583)
-
-[node name="Toaster by John Mason-Smith - 6Aoke0DThxh" parent="Toaster" unique_id=1232227454 instance=ExtResource("13_ycdy4")]
-transform = Transform3D(0.60181504, 0, 0.79863554, 0, 1, 0, -0.79863554, 0, 0.60181504, 0.378, 0.125, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Toaster" unique_id=211470657]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Toaster/StaticBody3D" unique_id=1974955077]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37417412, 0, 0.029663086)
-shape = SubResource("BoxShape3D_blegu")
+[node name="1MinTimer" type="Timer" parent="UI" unique_id=862517864]
+wait_time = 60.0

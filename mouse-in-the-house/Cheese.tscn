@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://de8tm4wq1bgy7"]
+
+[ext_resource type="Script" uid="uid://hsyts5ec100x" path="res://Scripts/cheese_collection.gd" id="1_u3vao"]
+[ext_resource type="PackedScene" uid="uid://bi7bf5ygbrnr" path="res://Assets/Cheese by Kay Lousberg - PzVtWHjNRj.glb" id="2_nvg7k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hx1py"]
+albedo_color = Color(0.8980392, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0a554"]
+material = SubResource("StandardMaterial3D_hx1py")
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ypke7"]
+radius = 0.2
+
+[node name="Cheese" type="Area3D" unique_id=1945939151]
+script = ExtResource("1_u3vao")
+
+[node name="OmniLight3D" type="SpotLight3D" parent="." unique_id=446597676]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.29889783, 0)
+light_color = Color(1, 1, 0, 1)
+light_size = 1.0
+light_specular = 0.0
+spot_range = 0.6
+spot_angle = 18.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1004126158]
+visible = false
+mesh = SubResource("BoxMesh_0a554")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1876420247]
+shape = SubResource("SphereShape3D_ypke7")
+
+[node name="Root Scene" parent="." unique_id=2076617805 instance=ExtResource("2_nvg7k")]
+transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0, -0.028640538, 0)
