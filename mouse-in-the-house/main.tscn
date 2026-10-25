@@ -291,24 +291,24 @@ shadow_blur = 2.0
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="Enviroment/Walls/StaticBody3D" unique_id=1863227967]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.5054243, 0, -0.9979966)
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Enviroment/Walls/StaticBody3D" unique_id=608805395]
+transform = Transform3D(-2.1855695e-07, 0, 1, 0, 2, 0, -5, 0, -4.371139e-08, -2.5054243, 0, -0.9979966)
 shape = SubResource("ConcavePolygonShape3D_h8e4i")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="Enviroment/Walls/StaticBody3D" unique_id=1828055784]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Enviroment/Walls/StaticBody3D" unique_id=1496492346]
+transform = Transform3D(10, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 4)
 shape = SubResource("ConcavePolygonShape3D_4lmeg")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Enviroment/Walls/StaticBody3D" unique_id=151364793]
-transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, -10.049, 2.535419, 4)
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Enviroment/Walls/StaticBody3D" unique_id=2022971647]
+transform = Transform3D(-2.1855695e-07, 7.5, 4.371139e-08, 0, -3.278354e-07, 1, 5, 3.278354e-07, 1.9106855e-15, -10.049, 2.535419, 4)
 shape = SubResource("ConcavePolygonShape3D_0cp0l")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Enviroment/Walls/StaticBody3D" unique_id=2079023603]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -10.049924, -0.0041894913, -1.001086)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Enviroment/Walls/StaticBody3D" unique_id=680700244]
+transform = Transform3D(-10, 0, -1.509958e-07, 0, 2, 0, 1.509958e-06, 0, -1, -10.049924, -0.0041894913, -1.001086)
 shape = SubResource("ConcavePolygonShape3D_d2t1y")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviroment/Walls/StaticBody3D" unique_id=849800142]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.049, 0, 4)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviroment/Walls/StaticBody3D" unique_id=128236018]
+transform = Transform3D(-2.1855695e-07, 0, -1, 0, 2, 0, 5, 0, -4.371139e-08, -10.049, 0, 4)
 shape = SubResource("ConcavePolygonShape3D_gngh3")
 
 [node name="Toaster" type="Node3D" parent="Enviroment" unique_id=15396407]
