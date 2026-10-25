@@ -40,4 +40,4 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		mouse.rotate_y(-event.relative.x * look_sensitivity)
 		camera.rotate_x(-event.relative.y * look_sensitivity)
-		camera.rotation.x = clampf(camera.rotation.x, deg_to_rad(-5), deg_to_rad(40))
+		camera.rotation.x = clampf(camera.rotation.x, deg_to_rad(10), deg_to_rad(60))

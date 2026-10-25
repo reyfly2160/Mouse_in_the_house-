@@ -1,7 +1,7 @@
 extends Control
 
 func _ready() -> void:
-	$"1MinTimer".start(120)
+	pass
 
 func _process(_delta: float) -> void:
 	var score = Global.cheese_count
