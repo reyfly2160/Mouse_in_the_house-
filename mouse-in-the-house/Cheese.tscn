@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://hsyts5ec100x" path="res://Scripts/cheese_collection.gd" id="1_u3vao"]
 [ext_resource type="PackedScene" uid="uid://bi7bf5ygbrnr" path="res://Assets/Cheese by Kay Lousberg - PzVtWHjNRj.glb" id="2_nvg7k"]
+[ext_resource type="AudioStream" uid="uid://brm4t1ml162ht" path="res://coin.wav" id="3_3n7xt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hx1py"]
 albedo_color = Color(0.8980392, 1, 0, 1)
@@ -33,3 +34,7 @@ shape = SubResource("SphereShape3D_ypke7")
 
 [node name="Root Scene" parent="." unique_id=2076617805 instance=ExtResource("2_nvg7k")]
 transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0, -0.028640538, 0)
+
+[node name="Coin" type="AudioStreamPlayer" parent="." unique_id=1819500870]
+stream = ExtResource("3_3n7xt")
+volume_db = 24.0

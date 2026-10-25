@@ -2,7 +2,7 @@ extends Node3D
 
 @export var cheese_scene: PackedScene = preload("res://Cheese.tscn")
 @export var cheese_count: int = 5
-@export var floor_size: Vector2 = Vector2(7.5, 5)
+@export var floor_size: Vector2 = Vector2(7.25, 4.75)
 
 @export var cheese_offset: float = 0.15
 @export var ray_height: float = 3.0

@@ -12,3 +12,9 @@ func _process(_delta: float) -> void:
 
 	$Label.text = str(score)
 	$Label2.text = "%02d:%02d" % [m, s]
+
+	if time_left == 4:
+		$Countdown.play()
+func _on_min_timer_timeout() -> void:
+	$"../Score".show()
+	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
