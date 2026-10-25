@@ -1,15 +1,15 @@
 [remap]
 
-importer="scene"
+importer="ArrayMesh"
 importer_version=1
-type="PackedScene"
+type="ArrayMesh"
 uid="uid://dubvkwuabrf1u"
-path="res://.godot/imported/Box by Kenney - HvjissDrdr.glb-006ebe7e7ffeb2ac4481d41bdd710aec.scn"
+path="res://.godot/imported/Box by Kenney - HvjissDrdr.glb-006ebe7e7ffeb2ac4481d41bdd710aec.res"
 
 [deps]
 
 source_file="res://Assets/Box by Kenney - HvjissDrdr.glb"
-dest_files=["res://.godot/imported/Box by Kenney - HvjissDrdr.glb-006ebe7e7ffeb2ac4481d41bdd710aec.scn"]
+dest_files=["res://.godot/imported/Box by Kenney - HvjissDrdr.glb-006ebe7e7ffeb2ac4481d41bdd710aec.res"]
 
 [params]
 
