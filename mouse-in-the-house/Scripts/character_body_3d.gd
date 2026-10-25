@@ -9,7 +9,7 @@ const JUMP_VELOCITY = 3.2
 @onready var camera = $Head/Camera3D
 
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	pass
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -37,7 +37,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func _unhandled_input(event: InputEvent) -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	if event is InputEventMouseMotion:
 		mouse.rotate_y(-event.relative.x * look_sensitivity)
 		camera.rotate_x(-event.relative.y * look_sensitivity)
