@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://4d0h4rjy6d1h"
-path="res://.godot/imported/Mouse by Poly by Google - cWxdxmp7yaE.glb-27754e412b8088ae4746ae33c1d7313a.scn"
+path="res://.godot/imported/Mouse by Poly by Google - cWxdxmp7yaE.glb-76ee7ca5c282abff355863888a08aa7a.scn"
 
 [deps]
 
-source_file="res://Mouse by Poly by Google - cWxdxmp7yaE.glb"
-dest_files=["res://.godot/imported/Mouse by Poly by Google - cWxdxmp7yaE.glb-27754e412b8088ae4746ae33c1d7313a.scn"]
+source_file="res://Assets/Mouse by Poly by Google - cWxdxmp7yaE.glb"
+dest_files=["res://.godot/imported/Mouse by Poly by Google - cWxdxmp7yaE.glb-76ee7ca5c282abff355863888a08aa7a.scn"]
 
 [params]
 
