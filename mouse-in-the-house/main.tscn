@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cdh50kkc4kr4w" path="res://Scripts/character_body_3d.gd" id="1_1bvp3"]
 [ext_resource type="AudioStream" uid="uid://pt0hbhvcqfot" path="res://Assets/sleepy_little_mouse.mp3" id="1_4k2k6"]
+[ext_resource type="Script" uid="uid://di7aa8pbnurgw" path="res://Scripts/main.gd" id="1_ok6jj"]
 [ext_resource type="ArrayMesh" uid="uid://dp5hjs0gwn4ak" path="res://kenny/Models/OBJ format/floorFull.obj" id="2_5vw27"]
 [ext_resource type="PackedScene" uid="uid://buwt7phhycs1c" path="res://Assets/Fridge by Blocks Demo - dTes5OLMprT.glb" id="2_lquwl"]
 [ext_resource type="PackedScene" uid="uid://buqid10w1am04" path="res://Assets/Kitchen Stove by Kenney - kTJU2y4R15.glb" id="3_7mycd"]
@@ -128,6 +129,7 @@ data = PackedVector3Array(-0.03, 0.049999997, 0.11, -0.17, 0.049999997, 0.11, -0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_blegu"]
 
 [node name="Main" type="Node3D" unique_id=1205235614]
+script = ExtResource("1_ok6jj")
 
 [node name="SleepyLittleMouse" type="AudioStreamPlayer" parent="." unique_id=190538590]
 stream = ExtResource("1_4k2k6")
@@ -695,7 +697,6 @@ flat = true
 [node name="Coin" type="AudioStreamPlayer" parent="." unique_id=316598615]
 stream = ExtResource("32_htxhm")
 volume_db = 24.0
-autoplay = true
 
 [connection signal="timeout" from="UI/1MinTimer" to="UI" method="_on_min_timer_timeout"]
 [connection signal="pressed" from="Menu/Button" to="Menu" method="_on_button_pressed"]

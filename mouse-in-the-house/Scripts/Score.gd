@@ -17,4 +17,4 @@ func _process(_delta: float) -> void:
 		$Countdown.play()
 func _on_min_timer_timeout() -> void:
 	$"../Score".show()
-	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

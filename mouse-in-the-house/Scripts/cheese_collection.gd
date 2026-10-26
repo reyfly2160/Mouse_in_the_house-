@@ -8,5 +8,4 @@ func _on_body_entered(body: Node3D) -> void:
 		Global.cheese_count += 1
 		print("Cheese collected!" + str(Global.cheese_count))
 		queue_free()
-		$Coin.play()
-		
+		Global.sfx.emit()
